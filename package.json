@@ -1,0 +1,24 @@
+{
+  "name": "fc-cli",
+  "version": "1.0.0",
+  "description": "fc-cli is a scaffold for initiating new projects from a given template",
+  "main": "./bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fc": "fc"
+  },
+  "keywords": [
+    "fc-cli"
+  ],
+  "author": "fc",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^6.2.0"
+  },
+  "bin": {
+    "fc": "./bin/index.js"
+  }
+}
