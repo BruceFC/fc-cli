@@ -16,7 +16,8 @@
     "chalk": "^4.1.0",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^6.2.0"
+    "commander": "^6.2.0",
+    "ora": "^5.1.0"
   },
   "bin": {
     "fc": "./bin/index.js"

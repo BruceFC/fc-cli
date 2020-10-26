@@ -6,6 +6,7 @@ const co = require('co')
 const prompt = require('co-prompt')
 const config = require(resolve(__dirname, '../templates.json'))
 const chalk = require('chalk')
+const ora = require('ora')
 
 // module.exports = () => {
     co(function *() {
@@ -25,7 +26,7 @@ const chalk = require('chalk')
 
         // let cmdStr = `git clone ${gitUrl} && cd ${projectName} && git checkout ${branch}`
         let cmdStr = `git clone ${gitUrl}`
-        
+        ora('正在下载模板…').start()
         console.log(chalk.white('\n Start generating......'))
 
         exec(cmdStr, (error, stdout, stderr) =>{
@@ -33,6 +34,7 @@ const chalk = require('chalk')
                 console.log(error)
                 process.exit()
             }
+            ora('正在下载模板…').stop()
             console.log(chalk.green('\n Generation completed!'))
             console.log(`\n cd ${projectName} && npm install \n`)
             process.exit()
